@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
 
   Future _getData() async {
     final String api =
-        "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=48e28d74e52e4f0eba9b6813060e2363";
+        "https://newsapi.org/v2/everything?q=bmw&from=2022-10-20&sortBy=publishedAt&apiKey=48e28d74e52e4f0eba9b6813060e2363";
     try {
       final response = await http.get(Uri.parse(api));
       if (response.statusCode == 200) {
